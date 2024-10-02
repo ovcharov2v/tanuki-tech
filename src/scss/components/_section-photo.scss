@@ -1,0 +1,39 @@
+.section-photo {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		border-radius: 22px;
+	}
+
+	&__thumb-slide {
+		border: 4px solid transparent;
+		border-radius: 16px;
+		overflow: hidden;
+		cursor: pointer;
+		transition: border-color .3s;
+
+		&:hover {
+			border-color: rgba(#0239FF, .7);
+		}
+
+		&--active {
+			border-color: #0239FF !important;
+		}
+	}
+
+	&__thumb {
+		display: block;
+		width: 100%;
+	}
+
+	&__slider {
+		margin-bottom: 16px;
+	}
+}

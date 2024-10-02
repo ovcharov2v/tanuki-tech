@@ -1,0 +1,74 @@
+body {
+	font-family: $font-primary;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.4;
+
+	@include desktop {
+		font-size: 18px;
+	}
+}
+
+input, button, textarea {
+	font-family: inherit;
+}
+
+.heading1 {
+	font-size: 30px;
+	line-height: 35px;
+	font-weight: 700;
+	color: $color-black;
+
+	@media (min-width: 360px) {
+		font-size: 40px;
+		line-height: 42px;
+	}
+
+	@include tablet {
+		letter-spacing: -0.02em;
+	}
+
+	@include desktop {
+		font-size: 60px;
+		line-height: 68px;
+	}
+}
+
+.heading2 {
+	position: relative;
+	font-size: 24px;
+	line-height: 29px;
+	font-weight: 700;
+	color: $color-black;
+
+	@include desktop {
+		font-size: 44px;
+		line-height: 1.1;
+		letter-spacing: -0.005em;
+	}
+
+	&--with-dot {
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: -26px;
+			transform: translateY(-50%);
+			width: 16px;
+			height: 16px;
+			background-color: #FF0A0A;
+			border-radius: 50%;
+			content: "";
+		}
+	}
+}
+
+.heading3 {
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: $color-black;
+
+	@include desktop {
+		line-height: 1.14;
+	}
+}

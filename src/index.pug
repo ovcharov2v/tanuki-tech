@@ -1,0 +1,580 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Tanuki Tech"
+	- meta.description = "Tanuki Tech"
+	- body.classList = 'gray-bg'
+	- headerType = "full"
+block content
+	// Section Hero
+	section.section-hero.container
+		h1.heading1.section-hero__title Присоединяйся к команде ТанукиТех
+		p.section-hero__text с нами роллы
+		.section-hero__illustration
+			+picture("section-hero/img1")(class="section-hero__img section-hero__img--n1")
+			+picture("section-hero/img2")(class="section-hero__img section-hero__img--n2")
+			+picture("section-hero/img3")(class="section-hero__img section-hero__img--n3")
+			+picture("section-hero/img4")(class="section-hero__img section-hero__img--n4")
+			+picture("section-hero/smile1")(class="section-hero__img section-hero__img--s1")
+			+picture("section-hero/smile2")(class="section-hero__img section-hero__img--s2")
+		.section-hero__button-box
+			button.section-hero__button.button Хочу вместе работать
+
+	// Section Connect
+	section.section-connect.container
+		.section-connect__header
+			h2.heading2.section-connect__title Соединяем IT и ресторанный  бизнес России
+			p.section-connect__text Тануки — один из самых узнаваемых брендов на рынке японской и паназиатской кухни. 72% посетителей* заведений общественного питания знают бренд Тануки.
+			p.section-connect__note *По данным Mediascope Russia за январь-август 2023 среди аудитории 25+
+		.section-connect__grid
+			// elem
+			article.section-connect__elem
+				h3.section-connect__elem-value 45
+				p.section-connect__elem-text Специалистов работает в ТанукиТех
+			// elem
+			article.section-connect__elem
+				h3.section-connect__elem-value 352
+				p.section-connect__elem-text Задач создается за месяц
+			// elem
+			article.section-connect__elem
+				h3.section-connect__elem-value 40+
+				p.section-connect__elem-text Релизов за месяц
+			// elem
+			article.section-connect__elem
+				h3.section-connect__elem-value 99,99%
+				p.section-connect__elem-text Доступность сервиса для гостей
+
+
+	// Section Portfolio
+	section.section-portfolio.container#portfolio
+		h2.heading2.section-portfolio__title Над чем мы работаем
+		.section-portfolio__grid
+			// elem
+			article.section-portfolio__elem
+				.section-portfolio__elem-header
+					h3.section-portfolio__elem-title Сайт и приложение для клиента
+					p.section-portfolio__elem-text Вот мы сайт делаем, он классный, все им пользуются и очень довольны, даааа
+				+picture("section-portfolio/img1")(class="section-portfolio__img")
+			// elem
+			article.section-portfolio__elem
+				.section-portfolio__elem-header
+					h3.section-portfolio__elem-title Мобильные приложения
+					p.section-portfolio__elem-text Для официантов  и курьеров
+				+picture("section-portfolio/img2")(class="section-portfolio__img")
+			// elem
+			article.section-portfolio__elem
+				.section-portfolio__elem-header
+					h3.section-portfolio__elem-title Электронное меню
+					p.section-portfolio__elem-text Гости в залах могут сразу заказать, оставить обратную связь и многое другое
+				+picture("section-portfolio/img3")(class="section-portfolio__img")
+			// elem
+			article.section-portfolio__elem
+				.section-portfolio__elem-header
+					h3.section-portfolio__elem-title OMS
+					p.section-portfolio__elem-text Система исполнения заказа
+				+picture("section-portfolio/img4")(class="section-portfolio__img")
+
+
+
+
+
+	// Section Technologies
+	section.section-technologies.container
+		h2.heading2.section-technologies__title Наши технологии
+		.section-technologies__grid
+			// group
+			.section-technologies__group
+				h3.section-technologies__group-title Infrastructure
+				.section-technologies__group-grid
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/docker")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Docker
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/k8s")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text K8s
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/nginx")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text NGINX
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/cicd")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text CI/CD
+			// group
+			.section-technologies__group
+				h3.section-technologies__group-title Frontend
+				.section-technologies__group-grid
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/ts")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text TSX
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/node")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Node.js
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/ts")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text TypeScript
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/jsx")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text JSX
+			// group
+			.section-technologies__group
+				h3.section-technologies__group-title Mobile
+				.section-technologies__group-grid
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/swift")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Swift
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/kotlin")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Kotlin
+			// group
+			.section-technologies__group
+				h3.section-technologies__group-title QA
+				.section-technologies__group-grid
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/ts")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text TypeScript
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/swift")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Swift
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/kotlin")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Kotlin
+			// group
+			.section-technologies__group
+				h3.section-technologies__group-title Backend
+				.section-technologies__group-grid
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/php")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text PHP
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/yii")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Yii
+			// group
+			.section-technologies__group
+				h3.section-technologies__group-title Data
+				.section-technologies__group-grid
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/redis")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Redis
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/mysql")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text My SQL
+			// group
+			.section-technologies__group
+				h3.section-technologies__group-title Observability
+				.section-technologies__group-grid
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/grafana")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Grafana
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/prometheus")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Prometheus
+			// group
+			.section-technologies__group
+				h3.section-technologies__group-title Workflow
+				.section-technologies__group-grid
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/jira")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Jira
+					// elem
+					figure.section-technologies__elem
+						+picture("section-technologies/confluence")(class="section-technologies__elem-icon")
+						figcaption.section-technologies__elem-text Confluence
+	// Section Radar
+	section.section-radar.container
+		h2.heading2.section-radar__title Техрадар
+		.section-radar__grid
+			.section-radar__image-col
+				img.section-radar__image(src="./images/section-radar/img.svg")
+			.section-radar__content-col
+				-
+					var list = [
+						{
+							category: 'Adopt',
+							categoryColor: 'green',
+							subCategoryList: [
+								{
+									subcategory: 'iOS',
+									items: [
+										{key: 'AWS EMR', value: '1'},
+										{key: 'Airflow', value: '3'},
+										{key: 'Databricks', value: '8'},
+										{key: 'Spark', value: '16'},
+										{key: 'AWS S3', value: '9'},
+										{key: 'Elasticsearch', value: '72'},
+										{key: 'Exasol', value: '90'},
+										{key: 'PostgreSQL', value: '30'},
+										{key: 'Redis', value: '2'},
+										{key: 'Etcd', value: '7'},
+									]
+								},
+								{
+									subcategory: 'Android',
+									items: [
+										{key: 'AWS CloudFormation', value: '36'},
+										{key: 'AWS CloudFront', value: '35'},
+										{key: 'Docker', value: '40'},
+										{key: 'OpenTracing', value: '20'},
+										{key: 'Skipper', value: '31'},
+										{key: 'Go', value: '32'},
+										{key: 'GraphQL', value: '33'},
+									]
+								},
+								{
+									subcategory: 'Web',
+									items: [
+										{key: 'Java', value: '34'},
+										{key: 'JavaScript', value: '35'},
+										{key: 'Kotlin', value: '36'},
+										{key: 'OpenAPI (Swagger)', value: '37'},
+										{key: 'Python', value: '38'},
+										{key: 'Scala', value: '39'},
+										{key: 'TypeScript', value: '40'},
+									]
+								},
+								{
+									subcategory: 'Back-end',
+									items: [
+										{key: 'AWS Kinesis', value: '41'},
+										{key: 'AWS SNS', value: '42'},
+										{key: 'AWS SQS', value: '43'},
+										{key: 'Kafka', value: '44'},
+										{key: 'Nakadi', value: '45'},
+									]
+								}
+							],
+						},
+						{
+							category: 'Trial',
+							categoryColor: 'violet',
+							subCategoryList: [
+								{
+									subcategory: 'iOS',
+									items: [
+										{key: 'Android', value: 'Web'},
+										{key: 'Flink', value: '1'},
+										{key: 'Google BigQuery', value: '3'},
+									]
+								},
+								{
+									subcategory: 'Android',
+									items: [
+										{key: 'Google BigQuery', value: '3'},
+										{key: 'Amazon Feature Store', value: '36'},
+										{key: 'Druid', value: '35'},
+										{key: 'HDFS', value: '40'},
+										{key: 'AWS Elemental MediaConvert', value: '20'},
+									]
+								},
+								{
+									subcategory: 'Web',
+									items: [
+										{key: 'AWS Lambda', value: '34'},
+										{key: 'AWS Step Functions', value: '35'},
+										{key: 'Dart', value: '36'},
+										{key: 'RabbitMQ', value: '37'},
+									]
+								}
+							],
+						},
+						{
+							category: 'Assess',
+							categoryColor: 'blue',
+							subCategoryList: [
+								{
+									subcategory: 'iOS',
+									items: [
+										{key: 'Flink', value: '1'},
+										{key: 'Presto', value: '8'},
+										{key: 'Amazon Redshift', value: '7'},
+									]
+								},
+								{
+									subcategory: 'Android',
+									items: [
+										{key: 'Google BigQuery', value: '3'},
+										{key: 'Amazon Feature Store', value: '36'},
+										{key: 'Druid', value: '35'},
+										{key: 'HDFS', value: '40'},
+										{key: 'AWS Elemental MediaConvert', value: '20'},
+									]
+								},
+								{
+									subcategory: 'Web',
+									items: [
+										{key: 'AWS Lambda', value: '34'},
+										{key: 'AWS Step Functions', value: '35'},
+										{key: 'Dart', value: '36'},
+										{key: 'RabbitMQ', value: '37'},
+									]
+								}
+							],
+						},
+						{
+							category: 'Hold',
+							categoryColor: 'gray',
+							subCategoryList: [
+								{
+									subcategory: 'iOS',
+									items: [
+										{key: 'Flink', value: '1'},
+										{key: 'Presto', value: '8'},
+										{key: 'Amazon Redshift', value: '7'},
+									]
+								},
+								{
+									subcategory: 'Android',
+									items: [
+										{key: 'Google BigQuery', value: '3'},
+										{key: 'Amazon Feature Store', value: '36'},
+										{key: 'Druid', value: '35'},
+										{key: 'HDFS', value: '40'},
+										{key: 'AWS Elemental MediaConvert', value: '20'},
+									]
+								},
+								{
+									subcategory: 'Web',
+									items: [
+										{key: 'AWS Lambda', value: '34'},
+										{key: 'AWS Step Functions', value: '35'},
+										{key: 'Dart', value: '36'},
+										{key: 'RabbitMQ', value: '37'},
+									]
+								}
+							],
+						},
+					]
+				ul.section-radar__category-list
+					each cat in list
+						li.section-radar__category-item-box
+							span(class=`section-radar__category-item section-radar__category-item--${cat.categoryColor}`)= cat.category
+							ul.section-radar__sub-category-list
+								each subCat in cat.subCategoryList
+									li.section-radar__sub-category-item-box
+										span.section-radar__sub-category-item= subCat.subcategory
+										ul.section-radar__items-list
+											each item in subCat.items
+												li.section-radar__item
+													span.section-radar__item-key= item.key
+													span.section-radar__item-value= item.value
+
+	// Section Photo
+	section.section-photo.container#photo
+		h2.heading2.heading2--with-dot.section-photo__title Фотоальбом
+		.tabs
+			.tabs__nav
+				button.tabs__nav-item.tabs__nav-item--active(data-tab="1") Гонка героев 2024
+				button.tabs__nav-item(data-tab="2") Лето вместе
+				button.tabs__nav-item(data-tab="3") ДР Антохи
+				button.tabs__nav-item(data-tab="4") Дегустация шоколада 18.08
+
+			.tabs__content
+				.tabs__item.tabs__item--active(data-tab="1")
+					.swiper.slider__main.section-photo__slider
+						.swiper-wrapper
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo1")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo2")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo3")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo4")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo5")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo6")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo7")(class="section-photo__img")
+					.swiper.slider__thumbs.section-photo__slider
+						.swiper-wrapper
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo1")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo2")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo3")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo4")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo5")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo6")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo7")(class="section-photo__thumb")
+
+				.tabs__item(data-tab="2")
+					.swiper.slider__main.section-photo__slider
+						.swiper-wrapper
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo4")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo5")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo6")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo7")(class="section-photo__img")
+					.swiper.slider__thumbs.section-photo__slider
+						.swiper-wrapper
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo4")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo5")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo6")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo7")(class="section-photo__thumb")
+
+				.tabs__item(data-tab="3")
+					.swiper.slider__main.section-photo__slider
+						.swiper-wrapper
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo2")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo3")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo4")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo5")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo6")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo7")(class="section-photo__img")
+					.swiper.slider__thumbs.section-photo__slider
+						.swiper-wrapper
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo2")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo3")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo4")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo5")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo6")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo7")(class="section-photo__thumb")
+
+				.tabs__item(data-tab="4")
+					.swiper.slider__main.section-photo__slider
+						.swiper-wrapper
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo5")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo6")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo7")(class="section-photo__img")
+					.swiper.slider__thumbs.section-photo__slider
+						.swiper-wrapper
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo5")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo6")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo7")(class="section-photo__thumb")
+
+
+
+
+	// Section Evolution
+	section.section-evolution.container#evolution
+		h2.heading2.section-evolution__title Развиваем техногильдии
+		.section-evolution__grid
+			.section-evolution__img-col
+				+picture("section-evolution/img1")(class="section-evolution__photo")
+			.section-evolution__content-col
+				p.section-evolution__text Обмениваемся опытом: организуем мероприятия, пишем статьи, выступаем с докладами. Поощряем развитие текущих комьюнити  и создание новых. Наполняем базу знаний, прокачиваем профессиональные навыки по направлениям:
+				+picture("section-evolution/img2")(class="section-evolution__img")
+
+	// Section Job
+	section.section-job.container#job
+		h2.heading2.section-job__title Вакансии
+		.tabs
+			.tabs__nav
+				button.tabs__nav-item.tabs__nav-item--active(data-tab="1") Все
+				button.tabs__nav-item(data-tab="2") Frontend
+				button.tabs__nav-item(data-tab="3") Менеджмент
+				button.tabs__nav-item(data-tab="4") Дизайн
+				button.tabs__nav-item(data-tab="5") QA
+			.tabs__content
+				.tabs__item.tabs__item--active(data-tab="1")
+					.section-job__grid
+						// Card
+						a.section-job__card(href="job.html")
+							p.section-job__card-type Удаленно, Россия
+							p.section-job__card-name UX/UI Designer
+							p.section-job__card-description Рисовать смешные картинки
+						// Card
+						a.section-job__card(href="job.html")
+							p.section-job__card-type Удаленно, Россия
+							p.section-job__card-name Менеджер продукта
+							p.section-job__card-description Придумывать сложные задачи
+						// Card
+						a.section-job__card(href="job.html")
+							p.section-job__card-type Офис, Москва
+							p.section-job__card-name Frontend Developer
+							p.section-job__card-description Менять цвета у кнопок на другие
+						// Card
+						a.section-job__card.section-job__card--wide(href="job.html")
+							p.section-job__card-type Офис, Москва
+							p.section-job__card-name Lead Frontend Developer
+							p.section-job__card-description Корректно разносить файлы по папкам
+						// Card
+						a.section-job__card.section-job__card--wide(href="job.html")
+							p.section-job__card-type Удаленно, Россия
+							p.section-job__card-name QA
+							p.section-job__card-description Не мешать разработчику
+				.tabs__item(data-tab="2")
+					.section-job__grid
+						// Card
+						a.section-job__card.section-job__card--wide(href="job.html")
+							p.section-job__card-type Офис, Москва
+							p.section-job__card-name Frontend Developer
+							p.section-job__card-description Менять цвета у кнопок на другие
+						// Card
+						a.section-job__card.section-job__card--wide(href="job.html")
+							p.section-job__card-type Офис, Москва
+							p.section-job__card-name Lead Frontend Developer
+							p.section-job__card-description Корректно разносить файлы по папкам
+				.tabs__item(data-tab="3")
+					.section-job__grid
+						// Card
+						a.section-job__card.section-job__card--wide(href="job.html")
+							p.section-job__card-type Удаленно, Россия
+							p.section-job__card-name Менеджер продукта
+							p.section-job__card-description Придумывать сложные задачи
+				.tabs__item(data-tab="4")
+					.section-job__grid
+						// Card
+						a.section-job__card.section-job__card--wide(href="job.html")
+							p.section-job__card-type Удаленно, Россия
+							p.section-job__card-name UX/UI Designer
+							p.section-job__card-description Рисовать смешные картинки
+				.tabs__item(data-tab="5")
+					.section-job__grid
+						// Card
+						a.section-job__card.section-job__card--wide(href="job.html")
+							p.section-job__card-type Удаленно, Россия
+							p.section-job__card-name QA
+							p.section-job__card-description Не мешать разработчику

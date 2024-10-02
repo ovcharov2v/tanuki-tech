@@ -1,0 +1,35 @@
+mixin footer()
+	footer.footer
+		.container
+			.footer__content-box
+				.footer__links-box.footer__links-box--mobile
+					p.footer__links-title Присоединяйтесь к нам
+					.footer__links-list.footer__links-list--social
+						a.footer__links-elem(href="#", target="_blank", rel="noreferrer noopener", title="AppStore")
+							+svg("vk")(class="footer__links-elem-icon")
+						a.footer__links-elem(href="#", target="_blank", rel="noreferrer noopener", title="Google Play")
+							+svg("telegram")(class="footer__links-elem-icon")
+				.footer__content
+					ul.footer__nav
+						li.footer__nav-elem
+							a.footer__nav-link(href="#", target="_blank", rel="noreferrer noopener") Политика конфиденциальности
+						li.footer__nav-elem
+							a.footer__nav-link(href="#", target="_blank", rel="noreferrer noopener") Пользовательское соглашение
+						li.footer__nav-elem
+							a.footer__nav-link(href="#", target="_blank", rel="noreferrer noopener") Согласие на обработку ПД
+					a.footer__phone-link(href="tel:+74996492223") +7 499 649-2-223
+					p.footer__copyright.footer__copyright--desktop © 2019 — 2024 Семья любимых ресторанов «ТанукиFamily в Москве»
+				.footer__links
+					.footer__links-box
+						p.footer__links-title Заказывайте с телефона
+						.footer__links-list.footer__links-list--app
+							a.footer__links-elem(href="#", target="_blank", rel="noreferrer noopener", title="AppStore")
+								+svg("app-store")(class="footer__links-elem-icon")
+							a.footer__links-elem(href="#", target="_blank", rel="noreferrer noopener", title="Google Play")
+								+svg("google-play")(class="footer__links-elem-icon")
+					.footer__links-box.footer__links-box--tablet
+						p.footer__links-title Присоединяйтесь к нам
+						.footer__links-list.footer__links-list--social
+							a.footer__links-elem(href="#", target="_blank", rel="noreferrer noopener", title="Google Play")
+								+svg("telegram")(class="footer__links-elem-icon")
+			p.footer__copyright.footer__copyright--mobile © 2019 — 2024 Семья любимых ресторанов «ТанукиFamily в Москве»

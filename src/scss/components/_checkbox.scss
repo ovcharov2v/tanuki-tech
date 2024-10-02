@@ -1,0 +1,44 @@
+.checkbox {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 500;
+	color: #B2ABAA;
+	padding: 0 16px;
+
+	&__input {
+		display: none;
+	}
+
+	&__icon-box {
+		flex-shrink: 0;
+		position: relative;
+		width: 16px;
+		height: 16px;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		transition: opacity $transition-default;
+
+		&--on {
+			opacity: 0;
+
+			.checkbox__input:checked + .checkbox__icon-box & {
+				opacity: 1;
+			}
+		}
+
+		&--off {
+		}
+	}
+
+	&__text {
+	}
+}

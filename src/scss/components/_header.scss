@@ -1,0 +1,60 @@
+.header {
+	width: 100%;
+	background-color: $color-white;
+
+	&--full {
+		position: fixed;
+		z-index: 888;
+		top: 0;
+		left: 0;
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		@include desktop {
+			padding-top: 28px;
+			padding-bottom: 28px;
+		}
+	}
+
+	&__logo {
+		flex-shrink: 0;
+		display: block;
+		width: 100%;
+		max-width: 148px;
+
+		@include desktop {
+			max-width: 260px;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+	}
+
+	&__nav-list {
+		display: flex;
+		gap: 24px;
+	}
+
+	&__nav-elem {
+	}
+
+	&__nav-link {
+		font-size: 18px;
+		line-height: 1.4;
+		font-weight: 500;
+		color: #000;
+	}
+
+	&__btn {
+	}
+}

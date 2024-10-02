@@ -1,0 +1,37 @@
+.file {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
+
+	&__input {
+		display: none;
+	}
+
+	&__text {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+		color: #0239FF;
+		cursor: pointer;
+		transition: color $transition-default;
+
+		&:hover {
+			color: darken(#0239FF, 10%);
+		}
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		width: 24px;
+		height: 24px;
+		margin-right: 4px;
+	}
+
+	&__result {
+		color: #585B5F;
+	}
+
+	&__result-name {
+		color: #000;
+	}
+}

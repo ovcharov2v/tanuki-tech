@@ -1,0 +1,15 @@
+@mixin background-image($img, $ext: "jpg") {
+	background-image: url("#{$img}@1x.webp");
+
+	.no-webp-support & {
+		background-image: url("#{$img}@1x.#{$ext}");
+	}
+
+	@include is-retina {
+		background-image: url("#{$img}@2x.webp");
+
+		.no-webp-support & {
+			background-image: url("#{$img}@2x.#{$ext}");
+		}
+	}
+}

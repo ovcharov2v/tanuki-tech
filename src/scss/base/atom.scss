@@ -1,0 +1,22 @@
+.underline {
+	position: relative;
+	white-space: nowrap;
+
+	&::after {
+		position: absolute;
+		bottom: -28%;
+		left: 0;
+		width: 100%;
+		height: 27%;
+		background-image: url("../images/underline.svg");
+		background-size: contain;
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+
+	@include desktop {
+		&::after {
+			content: "";
+		}
+	}
+}

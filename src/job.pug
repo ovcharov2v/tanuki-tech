@@ -1,0 +1,94 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Tanuki Tech | Вакансия"
+	- meta.description = "Tanuki Tech| Вакансия"
+block content
+	.container
+		ul.breadcrumbs
+			li.breadcrumbs__elem
+				a.breadcrumbs__link(href="./") Главная
+			li.breadcrumbs__elem
+				+svg("chevron-right")(class="breadcrumbs__icon")
+			li.breadcrumbs__elem
+				span.breadcrumbs__text UX/UI Designer
+	section.section-vacancy.container
+		.section-vacancy__grid
+			.section-vacancy__content
+				p.section-vacancy__type Удаленно, Россия
+				h1.heading2.section-vacancy__title UX/UI Designer
+				.section-vacancy__content-box
+					p В отдел дизайна ищем продуктового дизайнера. Мы работаем над внутренними интерфейсами: системы управления, контроля и сервисы для сотрудников. От вас будет зависеть, насколько удобно будет юзерам решать свои ежедневные задачи, а нашим коллегам делать компанию лучше и оптимизировать внутренние процессы.
+					p Задачи сложные, требуют большого погружения в суть проблемы и документацию. Ожидаем от кандидата способность выдавать продуманные и простые в использовании решения.
+					h2 Вам предстоит
+					ul
+						li Проектировать дизайн внешних и внутренних систем Ozon для веба: адаптивные админки, сложные интерфейсы и иногда — мобильные приложения.
+						li Получать бизнес-требования от менеджеров продукта.
+						li Проектировать пользовательские сценарии на основе собранной аналитики и бизнес-требований.
+						li Предлагать идеи решения дизайн-задач.
+						li Презентовать свою работу и работать с критикой.
+						li Изучать и использовать существующие UI-компоненты в дизайн-системе и добавлять новые в библиотеку при необходимости.
+						li Готовить интерактивные прототипы.
+					h2 Мы ожидаем, что вы:
+					ul
+						li Имеете портфолио с веб-интерфейсами с решением задач бизнеса.
+						li В портфолио важно показать проектирование от поставленной задачи до решения, глубоко анализировать бизнес-требования от потребностей пользователей до ручек в API.
+						li Умеете структурировать информацию и задавать вопросы.
+						li Обладаете хорошим фундаментом в дизайне: работа с типографикой, визуальной иерархией и цветом, а также дизайн-паттернами.
+						li Создавали линейные сценарии на основе задачи.
+						li Владеете Figma, умеете использовать компоненты, работать с библиотеками и плагинами.
+						li Умеете работать с вектором (рисовать иконки и простые иллюстрации).
+						li Понимаете основы верстки (чтобы представлять сложность реализации своих решений).
+						li Умеете работать по сложившимся гайдлайнам.
+					h2 Мы предлагаем:
+					ul
+						li Динамично и быстроразвивающийся бизнес, ресурсы, возможность сделать вместе лучший продукт на рынке e-commerce.
+						li Свободу действий в принятии решений.
+						li Достойный уровень заработной платы.
+						li Профессиональную команду, которой мы гордимся.
+						li Возможность развиваться вместе с нашим бизнесом.
+			form.section-vacancy__form(action="#")
+				h2.heading2.section-vacancy__form-title Заполните анкету
+				.form-group
+					input.form-group__input#name(type="text", name="name", placeholder=" ", required)
+					label.form-group__label(for="name") ФИО
+				.form-group
+					input.form-group__input#phone(type="tel", name="phone", placeholder=" ", required)
+					label.form-group__label(for="phone") Телефон для связи
+				.form-group
+					input.form-group__input#email(type="email", name="email", placeholder=" ", required)
+					label.form-group__label(for="email") E-mail
+				.form-group
+					input.form-group__input#comment(type="text", name="comment", placeholder=" ")
+					label.form-group__label(for="comment") Комментарий
+				.form-group
+					input.form-group__input#link(type="text", name="link", placeholder=" ")
+					label.form-group__label(for="email") Ссылка на резюме
+				label.file
+					input.file__input(type="file")
+					p.file__text
+						+svg("clip")(class="file__icon")
+						|Прикрепить файл
+					p.file__result
+						|Файл загружен:
+						|
+						|
+						span.file__result-name portfolio.pdf
+				button.button.button--with-gradient.section-vacancy__form-submit
+					span.button__text Откликнуться
+				label.checkbox
+					input.checkbox__input(type="checkbox")
+					.checkbox__icon-box
+						+svg("checkbox-off")(class="checkbox__icon checkbox__icon--off")
+						+svg("checkbox-on")(class="checkbox__icon checkbox__icon--on")
+					p.checkbox__text Отправляя сообщение, вы принимаете условия соглашения об использовании сайта, в том числе в части обработки и использования персональных данных
+	// Modal
+	.modal
+		.modal__window
+			h2.modal__title Анкета отправлена
+			p.heading2.modal__text Мы вам обязательно перезвоним!
+			button.button.button--with-gradient.modal__close
+				span.button__text Понятно

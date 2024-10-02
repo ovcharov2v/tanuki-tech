@@ -1,0 +1,18 @@
+mixin header()
+	header.header(class=headerType==='full'?'header--full':'')
+		.container.header__container
+			a.header__logo-box(href="./")
+				img.header__logo(src="./images/logo.svg", alt="TANUKI Tech")
+			if headerType==='full'
+				nav.header__nav
+					ul.header__nav-list
+						li.header__nav-elem
+							a.header__nav-link(href="#portfolio") Проекты
+						li.header__nav-elem
+							a.header__nav-link(href="#photo") Фотоконтроль
+						li.header__nav-elem
+							a.header__nav-link(href="#evolution") Техногильдии
+						li.header__nav-elem
+							a.header__nav-link(href="#job") Вакансии
+					a.button.button--size-md.header__nav-btn(href="./job.html") Хочу к вам
+

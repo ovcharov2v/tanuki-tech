@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
+	color: $color-text;
+	-webkit-font-smoothing: antialiased;
+
+	&.gray-bg {
+		background-color: $color-bg;
+	}
+}
+
+.main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+button {
+	cursor: pointer;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}

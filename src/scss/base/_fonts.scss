@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'PT Root UI';
+	font-display: swap;
+	src: url('../fonts/PTRootUI-Medium.eot');
+	src: local('PT Root UI Medium'), local('PTRootUI-Medium'),
+	url('../fonts/PTRootUI-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/PTRootUI-Medium.woff2') format('woff2'),
+	url('../fonts/PTRootUI-Medium.woff') format('woff'),
+	url('../fonts/PTRootUI-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PT Root UI';
+	font-display: swap;
+	src: url('../fonts/PTRootUI-Bold.eot');
+	src: local('PT Root UI Bold'), local('PTRootUI-Bold'),
+	url('../fonts/PTRootUI-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/PTRootUI-Bold.woff2') format('woff2'),
+	url('../fonts/PTRootUI-Bold.woff') format('woff'),
+	url('../fonts/PTRootUI-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ABC Gravity';
+	font-display: swap;
+	src: url('../fonts/ABCGravityCyrillic-Normal.eot');
+	src: url('../fonts/ABCGravityCyrillic-Normal.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/ABCGravityCyrillic-Normal.woff2') format('woff2'),
+	url('../fonts/ABCGravityCyrillic-Normal.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ABC Gravity Condensed';
+	font-display: swap;
+	src: url('../fonts/ABCGravityCyrillic-SemiCondensed.eot');
+	src: url('../fonts/ABCGravityCyrillic-SemiCondensed?#iefix') format('embedded-opentype'),
+	url('../fonts/ABCGravityCyrillic-SemiCondensed.woff2') format('woff2'),
+	url('../fonts/ABCGravityCyrillic-SemiCondensed.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}

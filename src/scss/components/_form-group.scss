@@ -1,0 +1,58 @@
+.form-group {
+	position: relative;
+	z-index: 0;
+	margin-bottom: 24px;
+
+	@include tablet {
+		margin-bottom: 40px;
+	}
+
+	@include desktop {
+		margin-bottom: 24px;
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		height: 41px;
+		padding: 16px 0 8px;
+		background: none;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 500;
+		border: solid #E5E1E1;
+		border-width: 0 0 1px 0;
+		transition: border-color $transition-default;
+
+		&:focus {
+			outline: none;
+			border-color: $color-black;
+			border-bottom-width: 2px;
+		}
+	}
+
+	&__label {
+		position: absolute;
+		z-index: 1;
+		top: 16px;
+		left: 0;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 500;
+		color: rgba($color-black, .64);
+		transform-origin: 0 0;
+		pointer-events: none;
+		transition: top $transition-default, transform $transition-default;
+
+		.form-group__input--select + & {
+			top: 12px;
+		}
+
+		input.form-group__input:not(:placeholder-shown) + &,
+		input.form-group__input:focus + &,
+		.form-group--filled & {
+			top: 0;
+			transform: scale(.75);
+		}
+	}
+}
