@@ -219,6 +219,13 @@ document.addEventListener('DOMContentLoaded', function () {
       closeModal();
     }
   });
+  var checkbox = document.querySelector('.section-vacancy__form-checkbox');
+  var submitBtn = document.querySelector('.section-vacancy__form-submit');
+  if (checkbox) {
+    checkbox.addEventListener('change', function () {
+      submitBtn.disabled = !checkbox.checked;
+    });
+  }
 });
 
 /***/ }),
@@ -271,13 +278,23 @@ document.addEventListener('DOMContentLoaded', function () {
       spaceBetween: 10,
       thumbs: {
         swiper: new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](thumbsSwiper, {
-          spaceBetween: 10,
-          slidesPerView: 6.4,
+          spaceBetween: 0,
+          slidesPerView: 3.5,
           freeMode: true,
           watchSlidesVisibility: true,
           watchSlidesProgress: true,
           slideActiveClass: 'section-photo__thumb-slide--active',
-          slideToClickedSlide: true
+          slideToClickedSlide: true,
+          breakpoints: {
+            768: {
+              spaceBetween: 4,
+              slidesPerView: 5.8
+            },
+            1024: {
+              spaceBetween: 10,
+              slidesPerView: 6.4
+            }
+          }
         })
       }
     });
@@ -291,6 +308,44 @@ document.addEventListener('DOMContentLoaded', function () {
         slide.classList.add('section-photo__thumb-slide--active');
       });
     });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/_section-portfolio.js":
+/*!**************************************!*\
+  !*** ./src/js/_section-portfolio.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.section-portfolio__slider', {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__["Pagination"]],
+    slidesPerView: 1.1,
+    spaceBetween: 12,
+    slidesPerGroup: 1,
+    pagination: {
+      el: '.section-portfolio__dots',
+      clickable: true
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 12,
+        slidesPerGroup: 2
+      },
+      1024: {
+        enabled: false
+      }
+    }
   });
 });
 
@@ -313,7 +368,17 @@ document.addEventListener('DOMContentLoaded', function () {
     tabsList.forEach(function (tabs) {
       var tabsNavs = tabs.querySelectorAll('.tabs__nav-item');
       var tabContents = tabs.querySelectorAll('.tabs__item');
-      tabsNavs.forEach(function (tab) {
+      tabsNavs.forEach(function (tab, index) {
+        var activeIndex = 0;
+        if (tabs.classList.contains('tabs--with-hidden-mobile-content')) {
+          activeIndex = window.innerWidth >= 1024 ? 0 : 1;
+        }
+        if (index === activeIndex) {
+          tab.classList.add('tabs__nav-item--active');
+        }
+        tabContents.forEach(function (content, index) {
+          if (index === activeIndex) content.classList.add('tabs__item--active');
+        });
         tab.addEventListener('click', function () {
           var tabId = tab.getAttribute('data-tab');
           tabsNavs.forEach(function (t) {
@@ -324,6 +389,22 @@ document.addEventListener('DOMContentLoaded', function () {
           });
           tab.classList.add('tabs__nav-item--active');
           tabs.querySelector(".tabs__item[data-tab=\"".concat(tabId, "\"]")).classList.add('tabs__item--active');
+        });
+      });
+    }); // Скролл вкладок
+    var containerList = document.querySelectorAll('.tabs__nav');
+    containerList.forEach(function (container) {
+      var buttons = container.querySelectorAll('.tabs__nav-item');
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          var buttonPosition = button.getBoundingClientRect().left + container.scrollLeft;
+          var buttonWidth = button.offsetWidth;
+          var containerCenter = container.clientWidth / 2;
+          var scrollPosition = buttonPosition - containerCenter + buttonWidth / 2;
+          container.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+          });
         });
       });
     });
@@ -345,7 +426,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_tabs */ "./src/js/_tabs.js");
 /* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_form */ "./src/js/_form.js");
-/* harmony import */ var _section_photo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_section-photo */ "./src/js/_section-photo.js");
+/* harmony import */ var _section_portfolio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_section-portfolio */ "./src/js/_section-portfolio.js");
+/* harmony import */ var _section_photo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_section-photo */ "./src/js/_section-photo.js");
+
 
 
 
