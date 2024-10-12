@@ -2,7 +2,7 @@ import IMask from "imask";
 
 document.addEventListener('DOMContentLoaded', () => {
 	const form = document.querySelector('.section-vacancy__form')
-	if(!form) return;
+	if (!form) return;
 
 	// Input masks
 	const phoneMask = IMask(
@@ -56,8 +56,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	modalCloseBtn.addEventListener('click', () => closeModal())
 
 	modal.addEventListener('click', (evt) => {
-		if(!evt.target.closest('.modal__window')) {
+		if (!evt.target.closest('.modal__window')) {
 			closeModal()
 		}
 	})
+
+	const checkbox = document.querySelector('.section-vacancy__form-checkbox')
+	const submitBtn = document.querySelector('.section-vacancy__form-submit')
+	if (checkbox) {
+		checkbox.addEventListener('change', () => {
+			submitBtn.disabled = !checkbox.checked
+		})
+	}
 })

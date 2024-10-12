@@ -1,15 +1,36 @@
 .section-evolution {
 	padding-top: 20px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
+
+	@include tablet {
+		padding-top: 30px;
+	}
+
+	@include desktop {
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
 
 	&__title {
-		margin-bottom: 40px;
+		margin-bottom: 24px;
+
+		@include tablet {
+			margin-bottom: 24px;
+		}
+
+		@include desktop {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__grid {
 		display: grid;
-		grid-template: auto / repeat(2,minmax(0,1fr));
+		grid-template: auto / 100%;
 		grid-gap: 24px;
+
+		@include tablet {
+			grid-template: auto / repeat(2,minmax(0,1fr));
+		}
 	}
 
 	&__img-col {
@@ -18,7 +39,16 @@
 	&__photo {
 		display: block;
 		width: 100%;
-		border-radius: 22px;
+		border-radius: 12px;
+		aspect-ratio: 1.8;
+		object-fit: cover;
+
+		@include tablet {
+			aspect-ratio: unset;
+		}
+
+		@include desktop {
+			border-radius: 22px;}
 	}
 
 	&__content-col {
@@ -26,10 +56,20 @@
 
 	&__text {
 		margin-bottom: 24px;
-		font-size: 18px;
-		line-height: 23px;
+		font-size: 16px;
+		line-height: 20px;
 		font-weight: 500;
 		color: #5C5C5C;
+
+		@include tablet {
+			margin-bottom: 0;
+		}
+
+		@include desktop {
+			margin-bottom: 24px;
+			font-size: 18px;
+			line-height: 23px;
+		}
 	}
 
 	&__img {

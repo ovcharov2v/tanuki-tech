@@ -1,0 +1,11 @@
+.slider-dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.swiper-pagination-bullet {
+		&-active {
+			background-color: #0057FF;
+		}
+	}
+}

@@ -12,9 +12,14 @@ body {
 	overflow-x: hidden;
 	color: $color-text;
 	-webkit-font-smoothing: antialiased;
+	background-color: #ECEFF6;
+
+	@include desktop {
+		background-color: #fff;
+	}
 
 	&.gray-bg {
-		background-color: $color-bg;
+		background-color: $color-bg !important;
 	}
 }
 

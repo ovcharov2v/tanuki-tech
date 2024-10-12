@@ -1,23 +1,42 @@
 .section-photo {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+
+	@include tablet {
+		padding-top: 30px;
+	}
+
+	@include desktop {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 
 	&__title {
-		margin-bottom: 40px;
+		margin-bottom: 24px;
+		@include desktop {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__img {
 		display: block;
 		width: 100%;
-		border-radius: 22px;
+		border-radius: 12px;
+
+		@include desktop {
+			border-radius: 22px;}
 	}
 
 	&__thumb-slide {
 		border: 4px solid transparent;
-		border-radius: 16px;
+		border-radius: 8px;
 		overflow: hidden;
 		cursor: pointer;
 		transition: border-color .3s;
+
+		@include desktop {
+			border-radius: 16px;
+		}
 
 		&:hover {
 			border-color: rgba(#0239FF, .7);
@@ -34,6 +53,12 @@
 	}
 
 	&__slider {
-		margin-bottom: 16px;
+		margin-bottom: 4px;
+
+		@include tablet {
+			margin-bottom: 6px;}
+
+		@include desktop {
+			margin-bottom: 16px;}
 	}
 }

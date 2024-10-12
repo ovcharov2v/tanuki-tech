@@ -6,7 +6,10 @@
 	line-height: 16px;
 	font-weight: 500;
 	color: #B2ABAA;
-	padding: 0 16px;
+
+	@include desktop {
+		padding: 0 16px;
+	}
 
 	&__input {
 		display: none;
@@ -40,5 +43,6 @@
 	}
 
 	&__text {
+		user-select: none;
 	}
 }

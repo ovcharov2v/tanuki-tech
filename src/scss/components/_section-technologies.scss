@@ -1,30 +1,54 @@
 .section-technologies {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+
+	@include tablet {
+		padding-top: 30px;
+	}
+
+	@include desktop {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 
 	&__title {
-		margin-bottom: 40px;
+		margin-bottom: 24px;
+
+		@include desktop {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__grid {
-		display: grid;
-		grid-template: auto / repeat(3,minmax(0,1fr));
-		grid-gap: 16px;
+		@include desktop {
+			display: grid;
+			grid-template: auto / repeat(3,minmax(0,1fr));
+			grid-gap: 16px;
+		}
 	}
 
 	&__group {
 	}
 
 	&__group-title {
+		display: none;
 		margin: 24px 0;
 		font-size: 20px;
 		line-height: 24px;
 		font-weight: 700;
 		color: #000;
+
+		@include tablet {
+		}
+
+		@include desktop {
+			display: block;
+		}
 	}
 
 	&__group-grid {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 8px;
 	}
 
@@ -34,17 +58,27 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 60px;
-		height: 60px;
+		width: 92px;
+		height: 92px;
 		background-color: #fff;
 		border-radius: 12px;
 		text-align: center;
+
+		@include desktop {
+			width: 60px;
+			height: 60px;
+		}
 	}
 
 	&__elem-icon {
 		display: block;
-		width: 32px;
-		height: 32px;
+		width: 48px;
+		height: 48px;
+
+		@include desktop {
+			width: 32px;
+			height: 32px;
+		}
 	}
 
 	&__elem-text {

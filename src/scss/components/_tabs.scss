@@ -3,15 +3,40 @@
 		display: flex;
 		gap: 8px;
 		margin-bottom: 16px;
+		overflow: scroll auto;
+		padding-bottom: 6px;
+		width: calc(100% + 32px);
+		margin-left: -16px;
+		padding-right: 16px;
+		padding-left: 16px;
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+			background: transparent;
+		}
+		scrollbar-width: none;
+		scrollbar-color: transparent transparent;
+		-ms-overflow-style: none;
+
+		@include desktop {
+			width: 100%;
+			padding-bottom: 0;
+		}
+
+		.tabs--mobile-only & {
+			@include desktop {
+				display: none;
+			}
+		}
 	}
 
 	&__nav-item {
-		padding: 12px 24px;
+		padding: 12px 16px;
 		background-color: #fff;
 		border-radius: 50px;
-		border:none;
-		font-size: 20px;
-		line-height: 24px;
+		border: none;
+		font-size: 18px;
+		line-height: 20px;
 		font-weight: 700;
 		white-space: nowrap;
 		color: #000;
@@ -21,6 +46,36 @@
 		&--active {
 			background-color: #0057FF;
 			color: #fff;
+
+			&.tabs__nav-item--green {
+				background-color: #1CDB74;
+			}
+
+			&.tabs__nav-item--blue {
+				background-color: #00B2FF;
+			}
+
+			&.tabs__nav-item--violet {
+				background-color: #5424F5;
+			}
+
+			&.tabs__nav-item--gray {
+				background-color: #8F8F8F;
+			}
+		}
+
+		@include desktop {
+			padding: 12px 24px;
+			font-size: 20px;
+			line-height: 24px;
+		}
+
+		&--hidden-mobile {
+			display: none;
+
+			@include desktop {
+				display: inline-block;
+			}
 		}
 	}
 
@@ -33,6 +88,20 @@
 
 		&--active {
 			display: block;
+		}
+
+		.tabs--mobile-only & {
+			@include desktop {
+				display: block;
+			}
+		}
+
+		&--hidden-mobile {
+			display: none;
+
+			@include desktop {
+				display: block;
+			}
 		}
 	}
 }

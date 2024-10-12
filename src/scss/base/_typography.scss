@@ -14,30 +14,21 @@ input, button, textarea {
 }
 
 .heading1 {
-	font-size: 30px;
-	line-height: 35px;
+	font-size: 32px;
+	line-height: 36px;
 	font-weight: 700;
 	color: $color-black;
-
-	@media (min-width: 360px) {
-		font-size: 40px;
-		line-height: 42px;
-	}
-
-	@include tablet {
-		letter-spacing: -0.02em;
-	}
 
 	@include desktop {
 		font-size: 60px;
 		line-height: 68px;
+		letter-spacing: -0.02em;
 	}
 }
 
 .heading2 {
-	position: relative;
-	font-size: 24px;
-	line-height: 29px;
+	font-size: 32px;
+	line-height: 36px;
 	font-weight: 700;
 	color: $color-black;
 
@@ -48,16 +39,36 @@ input, button, textarea {
 	}
 
 	&--with-dot {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
 		&::before {
-			position: absolute;
-			top: 50%;
-			left: -26px;
-			transform: translateY(-50%);
-			width: 16px;
-			height: 16px;
+			display: block;
+			width: 12px;
+			height: 12px;
 			background-color: #FF0A0A;
 			border-radius: 50%;
 			content: "";
+		}
+
+		@include tablet {
+			&::before {
+				width: 12px;
+				height: 12px;
+			}
+		}
+
+		@include desktop {
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: -26px;
+				transform: translateY(-50%);
+				width: 16px;
+				height: 16px;
+			}
 		}
 	}
 }

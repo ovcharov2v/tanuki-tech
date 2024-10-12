@@ -11,7 +11,7 @@ append vars
 block content
 	// Section Hero
 	section.section-hero.container
-		h1.heading1.section-hero__title Присоединяйся к команде ТанукиТех
+		h1.heading1.section-hero__title Присоединяйся к команде ТанукиТех
 		p.section-hero__text с нами роллы
 		.section-hero__illustration
 			+picture("section-hero/img1")(class="section-hero__img section-hero__img--n1")
@@ -26,22 +26,22 @@ block content
 	// Section Connect
 	section.section-connect.container
 		.section-connect__header
-			h2.heading2.section-connect__title Соединяем IT и ресторанный  бизнес России
+			h2.heading2.section-connect__title Соединяем IT и ресторанный бизнес России
 			p.section-connect__text Тануки — один из самых узнаваемых брендов на рынке японской и паназиатской кухни. 72% посетителей* заведений общественного питания знают бренд Тануки.
 			p.section-connect__note *По данным Mediascope Russia за январь-август 2023 среди аудитории 25+
 		.section-connect__grid
 			// elem
 			article.section-connect__elem
 				h3.section-connect__elem-value 45
-				p.section-connect__elem-text Специалистов работает в ТанукиТех
+				p.section-connect__elem-text Специалистов работает в ТанукиТех
 			// elem
 			article.section-connect__elem
 				h3.section-connect__elem-value 352
-				p.section-connect__elem-text Задач создается за месяц
+				p.section-connect__elem-text Задач создается за месяц
 			// elem
 			article.section-connect__elem
 				h3.section-connect__elem-value 40+
-				p.section-connect__elem-text Релизов за месяц
+				p.section-connect__elem-text Релизов за месяц
 			// elem
 			article.section-connect__elem
 				h3.section-connect__elem-value 99,99%
@@ -51,156 +51,170 @@ block content
 	// Section Portfolio
 	section.section-portfolio.container#portfolio
 		h2.heading2.section-portfolio__title Над чем мы работаем
-		.section-portfolio__grid
-			// elem
-			article.section-portfolio__elem
-				.section-portfolio__elem-header
-					h3.section-portfolio__elem-title Сайт и приложение для клиента
-					p.section-portfolio__elem-text Вот мы сайт делаем, он классный, все им пользуются и очень довольны, даааа
-				+picture("section-portfolio/img1")(class="section-portfolio__img")
-			// elem
-			article.section-portfolio__elem
-				.section-portfolio__elem-header
-					h3.section-portfolio__elem-title Мобильные приложения
-					p.section-portfolio__elem-text Для официантов  и курьеров
-				+picture("section-portfolio/img2")(class="section-portfolio__img")
-			// elem
-			article.section-portfolio__elem
-				.section-portfolio__elem-header
-					h3.section-portfolio__elem-title Электронное меню
-					p.section-portfolio__elem-text Гости в залах могут сразу заказать, оставить обратную связь и многое другое
-				+picture("section-portfolio/img3")(class="section-portfolio__img")
-			// elem
-			article.section-portfolio__elem
-				.section-portfolio__elem-header
-					h3.section-portfolio__elem-title OMS
-					p.section-portfolio__elem-text Система исполнения заказа
-				+picture("section-portfolio/img4")(class="section-portfolio__img")
-
-
-
-
+		.section-portfolio__slider-box
+			.section-portfolio__slider.swiper
+				.section-portfolio__grid.swiper-wrapper
+					// elem
+					article.section-portfolio__elem.swiper-slide
+						.section-portfolio__elem-header
+							h3.section-portfolio__elem-title Сайт и приложение для
+								br
+								|
+								|
+								|клиента
+							p.section-portfolio__elem-text Вот мы сайт делаем, он классный, все им пользуются и очень довольны, даааа
+						+picture("section-portfolio/img1")(class="section-portfolio__elem-img")
+					// elem
+					article.section-portfolio__elem.swiper-slide
+						.section-portfolio__elem-header
+							h3.section-portfolio__elem-title Мобильные приложения
+							p.section-portfolio__elem-text Для официантов  и курьеров
+						+picture("section-portfolio/img2")(class="section-portfolio__elem-img")
+					// elem
+					article.section-portfolio__elem.swiper-slide
+						.section-portfolio__elem-header
+							h3.section-portfolio__elem-title Электронное меню
+							p.section-portfolio__elem-text Гости в залах могут сразу заказать, оставить обратную связь и многое другое
+						+picture("section-portfolio/img3")(class="section-portfolio__elem-img")
+					// elem
+					article.section-portfolio__elem.swiper-slide
+						.section-portfolio__elem-header
+							h3.section-portfolio__elem-title OMS
+							p.section-portfolio__elem-text Система исполнения заказа
+						+picture("section-portfolio/img4")(class="section-portfolio__elem-img")
+		.section-portfolio__dots.slider-dots
 
 	// Section Technologies
 	section.section-technologies.container
 		h2.heading2.section-technologies__title Наши технологии
-		.section-technologies__grid
-			// group
-			.section-technologies__group
-				h3.section-technologies__group-title Infrastructure
-				.section-technologies__group-grid
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/docker")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Docker
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/k8s")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text K8s
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/nginx")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text NGINX
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/cicd")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text CI/CD
-			// group
-			.section-technologies__group
-				h3.section-technologies__group-title Frontend
-				.section-technologies__group-grid
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/ts")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text TSX
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/node")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Node.js
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/ts")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text TypeScript
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/jsx")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text JSX
-			// group
-			.section-technologies__group
-				h3.section-technologies__group-title Mobile
-				.section-technologies__group-grid
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/swift")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Swift
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/kotlin")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Kotlin
-			// group
-			.section-technologies__group
-				h3.section-technologies__group-title QA
-				.section-technologies__group-grid
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/ts")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text TypeScript
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/swift")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Swift
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/kotlin")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Kotlin
-			// group
-			.section-technologies__group
-				h3.section-technologies__group-title Backend
-				.section-technologies__group-grid
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/php")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text PHP
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/yii")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Yii
-			// group
-			.section-technologies__group
-				h3.section-technologies__group-title Data
-				.section-technologies__group-grid
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/redis")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Redis
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/mysql")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text My SQL
-			// group
-			.section-technologies__group
-				h3.section-technologies__group-title Observability
-				.section-technologies__group-grid
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/grafana")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Grafana
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/prometheus")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Prometheus
-			// group
-			.section-technologies__group
-				h3.section-technologies__group-title Workflow
-				.section-technologies__group-grid
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/jira")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Jira
-					// elem
-					figure.section-technologies__elem
-						+picture("section-technologies/confluence")(class="section-technologies__elem-icon")
-						figcaption.section-technologies__elem-text Confluence
+		.tabs.tabs--mobile-only
+			.tabs__nav
+				button.tabs__nav-item(data-tab="1") Infrastructure
+				button.tabs__nav-item(data-tab="2") Frontend
+				button.tabs__nav-item(data-tab="3") Mobile
+				button.tabs__nav-item(data-tab="4") QA
+				button.tabs__nav-item(data-tab="5") Backend
+				button.tabs__nav-item(data-tab="6") Data
+				button.tabs__nav-item(data-tab="7") Observability
+				button.tabs__nav-item(data-tab="8") Workflow
+
+			.section-technologies__grid.tabs__content
+				// group
+				.section-technologies__group.tabs__item(data-tab="1")
+					h3.section-technologies__group-title Infrastructure
+					.section-technologies__group-grid
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/docker")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Docker
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/k8s")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text K8s
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/nginx")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text NGINX
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/cicd")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text CI/CD
+				// group
+				.section-technologies__group.tabs__item(data-tab="2")
+					h3.section-technologies__group-title Frontend
+					.section-technologies__group-grid
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/ts")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text TSX
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/node")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Node.js
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/ts")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text TypeScript
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/jsx")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text JSX
+				// group
+				.section-technologies__group.tabs__item(data-tab="3")
+					h3.section-technologies__group-title Mobile
+					.section-technologies__group-grid
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/swift")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Swift
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/kotlin")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Kotlin
+				// group
+				.section-technologies__group.tabs__item(data-tab="4")
+					h3.section-technologies__group-title QA
+					.section-technologies__group-grid
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/ts")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text TypeScript
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/swift")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Swift
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/kotlin")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Kotlin
+				// group
+				.section-technologies__group.tabs__item(data-tab="5")
+					h3.section-technologies__group-title Backend
+					.section-technologies__group-grid
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/php")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text PHP
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/yii")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Yii
+				// group
+				.section-technologies__group.tabs__item(data-tab="6")
+					h3.section-technologies__group-title Data
+					.section-technologies__group-grid
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/redis")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Redis
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/mysql")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text My SQL
+				// group
+				.section-technologies__group.tabs__item(data-tab="7")
+					h3.section-technologies__group-title Observability
+					.section-technologies__group-grid
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/grafana")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Grafana
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/prometheus")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Prometheus
+				// group
+				.section-technologies__group.tabs__item(data-tab="8")
+					h3.section-technologies__group-title Workflow
+					.section-technologies__group-grid
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/jira")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Jira
+						// elem
+						figure.section-technologies__elem
+							+picture("section-technologies/confluence")(class="section-technologies__elem-icon")
+							figcaption.section-technologies__elem-text Confluence
 	// Section Radar
 	section.section-radar.container
 		h2.heading2.section-radar__title Техрадар
@@ -378,19 +392,35 @@ block content
 												li.section-radar__item
 													span.section-radar__item-key= item.key
 													span.section-radar__item-value= item.value
+				.tabs.section-radar__tabs
+					.tabs__nav
+						each cat, index in list
+							button(data-tab=index, class=`tabs__nav-item tabs__nav-item--${cat.categoryColor}`)= cat.category
+					.tabs__content
+						each cat, index in list
+							.tabs__item(data-tab=index)
+								ul.section-radar__sub-category-list
+									each subCat in cat.subCategoryList
+										li.section-radar__sub-category-item-box
+											span.section-radar__sub-category-item= subCat.subcategory
+											ul.section-radar__items-list
+												each item in subCat.items
+													li.section-radar__item
+														span.section-radar__item-key= item.key
+														span.section-radar__item-value= item.value
 
 	// Section Photo
 	section.section-photo.container#photo
 		h2.heading2.heading2--with-dot.section-photo__title Фотоальбом
 		.tabs
 			.tabs__nav
-				button.tabs__nav-item.tabs__nav-item--active(data-tab="1") Гонка героев 2024
+				button.tabs__nav-item(data-tab="1") Гонка героев 2024
 				button.tabs__nav-item(data-tab="2") Лето вместе
 				button.tabs__nav-item(data-tab="3") ДР Антохи
 				button.tabs__nav-item(data-tab="4") Дегустация шоколада 18.08
 
 			.tabs__content
-				.tabs__item.tabs__item--active(data-tab="1")
+				.tabs__item(data-tab="1")
 					.swiper.slider__main.section-photo__slider
 						.swiper-wrapper
 							.swiper-slide.section-photo__img-slide
@@ -510,15 +540,15 @@ block content
 	// Section Job
 	section.section-job.container#job
 		h2.heading2.section-job__title Вакансии
-		.tabs
+		.tabs.tabs--with-hidden-mobile-content
 			.tabs__nav
-				button.tabs__nav-item.tabs__nav-item--active(data-tab="1") Все
+				button.tabs__nav-item.tabs__nav-item--hidden-mobile(data-tab="1") Все
 				button.tabs__nav-item(data-tab="2") Frontend
 				button.tabs__nav-item(data-tab="3") Менеджмент
 				button.tabs__nav-item(data-tab="4") Дизайн
 				button.tabs__nav-item(data-tab="5") QA
 			.tabs__content
-				.tabs__item.tabs__item--active(data-tab="1")
+				.tabs__item.tabs__item--hidden-mobile(data-tab="1")
 					.section-job__grid
 						// Card
 						a.section-job__card(href="job.html")

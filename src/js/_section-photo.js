@@ -11,13 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
 			spaceBetween: 10,
 			thumbs: {
 				swiper: new Swiper(thumbsSwiper, {
-					spaceBetween: 10,
-					slidesPerView: 6.4,
+					spaceBetween: 0,
+					slidesPerView: 3.5,
 					freeMode: true,
 					watchSlidesVisibility: true,
 					watchSlidesProgress: true,
 					slideActiveClass: 'section-photo__thumb-slide--active',
 					slideToClickedSlide: true,
+					breakpoints: {
+						768: {
+							spaceBetween: 4,
+							slidesPerView: 5.8,
+						},
+						1024: {
+							spaceBetween: 10,
+							slidesPerView: 6.4,
+						},
+					}
 				}),
 			},
 		});

@@ -20,16 +20,12 @@
 		transform: translateY(20%);
 		width: 100%;
 		max-width: 348px;
-		margin: auto auto 56px;
+		margin: auto;
 		padding: 32px;
 		background-color: $color-white;
 		border-radius: 16px;
 		text-align: center;
 		transition: opacity $transition-default, transform $transition-default;
-
-		@include tablet {
-			margin: auto;}
-
 		.modal--show & {
 			opacity: 1;
 			transform: none;

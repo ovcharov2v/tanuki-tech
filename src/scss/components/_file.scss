@@ -1,7 +1,12 @@
 .file {
+	display: none;
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 500;
+
+	@include desktop {
+		display: inline-block;
+	}
 
 	&__input {
 		display: none;

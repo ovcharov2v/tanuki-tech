@@ -7,9 +7,9 @@
 	border-radius: 100px;
 	border: none;
 	background-color: $color-blue;
-	padding: 12px 16px;
-	font-size: 15px;
-	line-height: 1.2;
+	padding: 16px 24px;
+	font-size: 18px;
+	line-height: 20px;
 	font-weight: 700;
 	color: $color-white;
 	text-align: center;
@@ -20,14 +20,10 @@
 		white-space: nowrap;
 	}
 
-	@include tablet {
-		padding: 12px 32px;
-		font-size: 16px;
-	}
-
 	@include desktop {
 		padding: 16px 32px;
 		font-size: 20px;
+		line-height: 1.2;
 	}
 
 	&__size--md {
@@ -76,5 +72,14 @@
 	&__text {
 		position: relative;
 		z-index: 1;
+	}
+
+	&:disabled {
+		background-color: #8A8D93;
+		pointer-events: none;
+
+		&::before {
+			opacity: 0;
+		}
 	}
 }
