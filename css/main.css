@@ -2353,8 +2353,8 @@ a {
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: auto;
-    -ms-grid-columns: 100%;
-        grid-template: auto / 100%;
+    -ms-grid-columns: 1fr;
+        grid-template: auto / 1fr;
     grid-gap: 16px; }
     @media (min-width: 768px) {
       .section-job__grid {
