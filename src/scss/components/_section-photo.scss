@@ -24,7 +24,8 @@
 		border-radius: 12px;
 
 		@include desktop {
-			border-radius: 22px;}
+			border-radius: 22px;
+		}
 	}
 
 	&__thumb-slide {
@@ -52,13 +53,16 @@
 		width: 100%;
 	}
 
-	&__slider {
+	&__slider-main {
 		margin-bottom: 4px;
 
 		@include tablet {
-			margin-bottom: 6px;}
+			margin-bottom: 6px;
+		}
 
 		@include desktop {
-			margin-bottom: 16px;}
+			max-width: 750px;
+			margin-bottom: 16px;
+		}
 	}
 }

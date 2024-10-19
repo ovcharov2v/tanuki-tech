@@ -35,7 +35,7 @@
 		}
 
 		@include desktop {
-			grid-template: auto / minmax(0,573fr) minmax(0, 556fr);
+			grid-template: auto / minmax(0,540fr) minmax(0, 620fr);
 			grid-gap: 40px;
 		}
 	}
@@ -64,11 +64,13 @@
 
 		@include tablet {
 			display: flex;
-			gap: 12px;
+			gap: 6px;
 		}
 
 		@include desktop {
-			gap: 16px;
+			display: grid;
+			grid-template: auto / repeat(4, minmax(0,1fr));
+			grid-gap: 16px;
 		}
 	}
 
@@ -125,7 +127,8 @@
 		}
 
 		@include desktop {
-			grid-gap: 18px;
+			grid-template: auto / 1fr;
+			grid-gap: 16px;
 			font-size: 11px;
 			line-height: 13px;
 		}

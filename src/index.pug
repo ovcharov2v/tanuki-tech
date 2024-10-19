@@ -238,43 +238,33 @@ block content
 										{key: 'AWS S3', value: '9'},
 										{key: 'Elasticsearch', value: '72'},
 										{key: 'Exasol', value: '90'},
-										{key: 'PostgreSQL', value: '30'},
-										{key: 'Redis', value: '2'},
 										{key: 'Etcd', value: '7'},
 									]
 								},
 								{
-									subcategory: 'Android',
+									subcategory: 'ANDROID',
 									items: [
 										{key: 'AWS CloudFormation', value: '36'},
 										{key: 'AWS CloudFront', value: '35'},
 										{key: 'Docker', value: '40'},
-										{key: 'OpenTracing', value: '20'},
-										{key: 'Skipper', value: '31'},
 										{key: 'Go', value: '32'},
 										{key: 'GraphQL', value: '33'},
 									]
 								},
 								{
-									subcategory: 'Web',
+									subcategory: 'WEB',
 									items: [
 										{key: 'Java', value: '34'},
 										{key: 'JavaScript', value: '35'},
 										{key: 'Kotlin', value: '36'},
 										{key: 'OpenAPI (Swagger)', value: '37'},
-										{key: 'Python', value: '38'},
-										{key: 'Scala', value: '39'},
-										{key: 'TypeScript', value: '40'},
 									]
 								},
 								{
-									subcategory: 'Back-end',
+									subcategory: 'BACK-END',
 									items: [
 										{key: 'AWS Kinesis', value: '41'},
 										{key: 'AWS SNS', value: '42'},
-										{key: 'AWS SQS', value: '43'},
-										{key: 'Kafka', value: '44'},
-										{key: 'Nakadi', value: '45'},
 									]
 								}
 							],
@@ -286,13 +276,13 @@ block content
 								{
 									subcategory: 'iOS',
 									items: [
-										{key: 'Android', value: 'Web'},
 										{key: 'Flink', value: '1'},
-										{key: 'Google BigQuery', value: '3'},
+										{key: 'Presto', value: '8'},
+										{key: 'Amazon Redshift', value: '7'},
 									]
 								},
 								{
-									subcategory: 'Android',
+									subcategory: 'ANDROID',
 									items: [
 										{key: 'Google BigQuery', value: '3'},
 										{key: 'Amazon Feature Store', value: '36'},
@@ -302,7 +292,7 @@ block content
 									]
 								},
 								{
-									subcategory: 'Web',
+									subcategory: 'WEB',
 									items: [
 										{key: 'AWS Lambda', value: '34'},
 										{key: 'AWS Step Functions', value: '35'},
@@ -325,7 +315,7 @@ block content
 									]
 								},
 								{
-									subcategory: 'Android',
+									subcategory: 'ANDROID',
 									items: [
 										{key: 'Google BigQuery', value: '3'},
 										{key: 'Amazon Feature Store', value: '36'},
@@ -335,7 +325,7 @@ block content
 									]
 								},
 								{
-									subcategory: 'Web',
+									subcategory: 'WEB',
 									items: [
 										{key: 'AWS Lambda', value: '34'},
 										{key: 'AWS Step Functions', value: '35'},
@@ -358,7 +348,7 @@ block content
 									]
 								},
 								{
-									subcategory: 'Android',
+									subcategory: 'ANDROID',
 									items: [
 										{key: 'Google BigQuery', value: '3'},
 										{key: 'Amazon Feature Store', value: '36'},
@@ -368,7 +358,7 @@ block content
 									]
 								},
 								{
-									subcategory: 'Web',
+									subcategory: 'WEB',
 									items: [
 										{key: 'AWS Lambda', value: '34'},
 										{key: 'AWS Step Functions', value: '35'},
@@ -421,7 +411,7 @@ block content
 
 			.tabs__content
 				.tabs__item(data-tab="1")
-					.swiper.slider__main.section-photo__slider
+					.swiper.slider__main.section-photo__slider-main
 						.swiper-wrapper
 							.swiper-slide.section-photo__img-slide
 								+picture("section-photo/photo1", baseExt="jpg")(class="section-photo__img")
@@ -437,7 +427,13 @@ block content
 								+picture("section-photo/photo6", baseExt="jpg")(class="section-photo__img")
 							.swiper-slide.section-photo__img-slide
 								+picture("section-photo/photo7", baseExt="jpg")(class="section-photo__img")
-					.swiper.slider__thumbs.section-photo__slider
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo7", baseExt="jpg")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo7", baseExt="jpg")(class="section-photo__img")
+							.swiper-slide.section-photo__img-slide
+								+picture("section-photo/photo7", baseExt="jpg")(class="section-photo__img")
+					.swiper.slider__thumbs.section-photo__slider-thumb
 						.swiper-wrapper
 							.swiper-slide.section-photo__thumb-slide
 								+picture("section-photo/photo1", baseExt="jpg")(class="section-photo__thumb")
@@ -451,6 +447,12 @@ block content
 								+picture("section-photo/photo5", baseExt="jpg")(class="section-photo__thumb")
 							.swiper-slide.section-photo__thumb-slide
 								+picture("section-photo/photo6", baseExt="jpg")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo7", baseExt="jpg")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo7", baseExt="jpg")(class="section-photo__thumb")
+							.swiper-slide.section-photo__thumb-slide
+								+picture("section-photo/photo7", baseExt="jpg")(class="section-photo__thumb")
 							.swiper-slide.section-photo__thumb-slide
 								+picture("section-photo/photo7", baseExt="jpg")(class="section-photo__thumb")
 

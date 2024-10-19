@@ -20,8 +20,8 @@ input, button, textarea {
 	color: $color-black;
 
 	@include desktop {
-		font-size: 60px;
-		line-height: 68px;
+		font-size: 52px;
+		line-height: 66px;
 		letter-spacing: -0.02em;
 	}
 }
